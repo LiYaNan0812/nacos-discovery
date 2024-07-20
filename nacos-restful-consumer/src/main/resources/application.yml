@@ -1,0 +1,14 @@
+server:
+    port: 56020
+    
+provider:
+    ip: localhost
+    port: 56010
+    
+spring:
+    application:
+        name: springcloud-restful-confumer
+    cloud:
+        nacos:
+            discovery:
+                server-addr: 127.0.0.1:8848
