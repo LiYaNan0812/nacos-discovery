@@ -1,0 +1,26 @@
+server:
+  port: 56030
+
+spring:
+  application:
+    name: dubbo-service1
+  main:
+    allow-bean-definition-overriding: true #允许bean名称重复
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: namespace_dev
+
+dubbo:
+  scan:
+    base-packages: com.lyn.microservice.service1.service
+  protocol:
+    name: dubbo
+    port: 20892
+  registry:
+    address: nacos://127.0.0.1:8848?namespace=namespace_dev
+  application:
+    qos-enable: false #dubbo运维服务关闭
+  consumer:
+    check: false #关闭启动时检查依赖服务

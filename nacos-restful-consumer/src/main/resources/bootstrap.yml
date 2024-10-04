@@ -1,0 +1,32 @@
+server:
+  port: 56020
+
+provider:
+  ip: localhost
+  port: 56010
+
+spring:
+  application:
+    name: springcloud-restful-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848 #服务发现中心
+        namespace: namespace_dev
+        cluster-name: DEFAULT
+      config:
+        server-addr: 127.0.0.1:8848 #配置管理中心
+        file-extension: yml #加载配置中心中应用名+扩展名的配置文件，即springcloud-restful-consumer.yml
+        ext-config[0]:
+          data-id: ext-config-common01.yaml
+          group: COMMON_GROUP
+          refresh: true
+        ext-config[1]:
+          data-id: ext-config-common02.yaml
+          group: COMMON_GROUP
+          refresh: true
+
+#对具体的服务配置相应的负载均衡策略
+springcloud-restful-provider:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

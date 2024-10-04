@@ -43,6 +43,24 @@
             <version>1.18.8</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>com.lyn</groupId>
+            <artifactId>service2-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-dubbo</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.lyn</groupId>
+            <artifactId>service1-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
 
     </dependencies>
     <build>

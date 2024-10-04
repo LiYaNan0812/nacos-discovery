@@ -1,12 +1,12 @@
-package com.lyn;
+package com.lyn.microservice.service1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-//@EnableDiscoveryClient
-public class SpringRestProviderBootstrap {
+public class Service1Bootstrap {
+
     public static void main(String[] args) {
-        SpringApplication.run(SpringRestProviderBootstrap.class,args);
+        SpringApplication.run(Service1Bootstrap.class, args);
     }
 }
